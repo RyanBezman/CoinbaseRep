@@ -1,0 +1,71 @@
+.navbar-header {
+  height: 109px;
+  border-bottom: 1px solid rgb(236, 239, 241);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.coinbase-logo-wrapper {
+  width: 20%;
+}
+.coinbase-logo {
+  max-height: 20px;
+  width: 112px;
+}
+.coinbase-logo:hover {
+  cursor: pointer;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1180px;
+  padding: 0px 20px;
+  margin: 0px 242px;
+  width: 100%;
+  min-height: 66px;
+}
+.nav-main {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 5px;
+}
+.globe {
+  height: 17px;
+  width: 17px;
+  padding: 1px 6px;
+}
+.globe:hover {
+  cursor: pointer;
+}
+.globe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8px;
+}
+.navlinks {
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navlinks:hover {
+  transition: ease-in;
+  border-bottom: 3px solid rgb(0, 82, 255);
+  cursor: pointer;
+}
+.nav-buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
