@@ -1,0 +1,9 @@
+.learn-wrapper {
+  height: 100px;
+  width: 100%;
+  padding: 40px 45px;
+  background: rgb(255, 255, 255);
+  transition: all 150ms linear 0s, box-shadow 0ms linear 0s;
+  width: 100%;
+  border-bottom: 1px solid rgb(236, 239, 241);
+}

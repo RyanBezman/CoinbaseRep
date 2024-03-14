@@ -1,15 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 import { Home } from "./pages/home";
+import React from "react";
+
+export const Context = React.createContext();
 
 function App() {
-  const [dropdownSection, setDropddownSection] = useState("");
-
+  const [navbarHover, setNavbarHover] = useState("");
   return (
     <>
-      <div className="home-wrapper">
-        <Home />
-      </div>
+      <Context.Provider value={[navbarHover, setNavbarHover]}>
+        <div className="home-wrapper">
+          <Home />
+        </div>
+      </Context.Provider>
     </>
   );
 }

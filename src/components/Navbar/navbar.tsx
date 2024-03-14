@@ -2,7 +2,12 @@ import { SignIn } from "../Buttons/signin";
 import { SignUp } from "../Buttons/signup";
 import { Banner } from "./banner";
 import "./navbar.css";
+import { Context } from "../../App";
+import { useContext } from "react";
+
 export function Navbar() {
+  const [navbarHover, setNavbarHover] = useContext(Context);
+
   return (
     <div className="navbar-header">
       <Banner />
@@ -14,22 +19,67 @@ export function Navbar() {
           />
         </div>
         <div className="nav-main">
-          <div className="navlinks explore">
+          <div
+            className="navlinks explore"
+            onMouseEnter={() => {
+              setNavbarHover("explore");
+            }}
+          >
             <span>Explore</span>
           </div>
-          <div className="navlinks learn">
+          <div
+            className="navlinks learn"
+            onMouseEnter={() => {
+              setNavbarHover("learn");
+            }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
+          >
             <span>Learn</span>
           </div>
-          <div className="navlinks individuals">
+          <div
+            className="navlinks individuals"
+            onMouseEnter={() => {
+              setNavbarHover("individuals");
+            }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
+          >
             <span>Individuals</span>
           </div>
-          <div className="navlinks businesses">
+          <div
+            className="navlinks businesses"
+            onMouseEnter={() => {
+              setNavbarHover("businesses");
+            }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
+          >
             <span>Businesses</span>
           </div>
-          <div className="navlinks developers">
+          <div
+            className="navlinks developers"
+            onMouseEnter={() => {
+              setNavbarHover("developers");
+            }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
+          >
             <span>Developers</span>
           </div>
-          <div className="navlinks Company">
+          <div
+            className="navlinks Company"
+            onMouseEnter={() => {
+              setNavbarHover("company");
+            }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
+          >
             <span>Company</span>
           </div>
         </div>

@@ -6,5 +6,6 @@
   color: white;
   flex-grow: 1;
   font-size: 18px;
+  min-width: 100%;
   font-weight: 600;
 }

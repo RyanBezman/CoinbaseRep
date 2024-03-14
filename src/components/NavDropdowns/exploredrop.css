@@ -1,5 +1,50 @@
 .explore-wrapper {
   height: 100px;
   width: 100%;
-  border-bottom: 1px solid black;
+  padding: 40px 45px;
+  background: rgb(255, 255, 255);
+  transition: all 150ms linear 0s, box-shadow 0ms linear 0s;
+  width: 100%;
+  border-bottom: 1px solid rgb(236, 239, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.left-explore {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.right-explore {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+}
+.graph-logo {
+  height: 40px;
+  width: 40px;
+  filter: drop-shadow(rgba(91, 97, 110, 0.14) 0px 2px 2px)
+    drop-shadow(rgba(91, 97, 110, 0.12) 0px 3px 1px)
+    drop-shadow(rgba(91, 97, 110, 0.2) 0px 1px 5px);
+}
+.graph-image-wrapper {
+  display: flex;
+  gap: 12px;
+}
+.logo-references-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.top-reference {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(5, 15, 25);
+}
+.bottom-reference {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(17, 51, 83, 0.6);
 }
