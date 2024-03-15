@@ -1,0 +1,90 @@
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-centered {
+  width: 1180px;
+  background-color: white;
+  display: flex;
+}
+.phonescreen-wrapper {
+  /* min-width: 636px; */
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-pic {
+  max-width: 644px;
+  max-height: 636px;
+}
+.main-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.main-input-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 472px;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+.signup-header {
+  font-size: 64px;
+  font-weight: 400;
+  max-width: 390px;
+}
+.signup-body {
+  font-size: 28px;
+  line-height: 36px;
+}
+.main-input {
+  padding: 17px;
+  border: 1px solid rgba(91, 97, 110, 0.2);
+  border-radius: 8px;
+  flex: 1 1 auto;
+  font-size: 18px;
+  font-weight: 400;
+  height: auto;
+}
+.main-signup-button {
+  height: 56px;
+  min-width: 100px;
+  width: 124.203px;
+  background-color: rgb(0, 82, 255);
+  border-radius: 56px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.main-signup-button:hover {
+  background-color: rgb(1, 76, 236);
+  cursor: pointer;
+}
+.p-email {
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+.main-signup-p-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 48px;
+  gap: 20px;
+}
+.signup-reward {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  margin-top: 0;
+}

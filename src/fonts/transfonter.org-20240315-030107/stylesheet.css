@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Coinbase Sans";
+  src: url("CoinbaseSans-Medium.woff2") format("woff2"),
+    url("CoinbaseSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Mono";
+  src: url("CoinbaseMono-Medium.woff2") format("woff2"),
+    url("CoinbaseMono-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Sans";
+  src: url("CoinbaseSans-Regular.woff2") format("woff2"),
+    url("CoinbaseSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Sans";
+  src: url("CoinbaseSans-Medium.woff2") format("woff2"),
+    url("CoinbaseSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Mono";
+  src: url("CoinbaseMono-Regular.woff2") format("woff2"),
+    url("CoinbaseMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Sans";
+  src: url("CoinbaseSans-Regular.woff2") format("woff2"),
+    url("CoinbaseSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Display";
+  src: url("CoinbaseDisplay-Regular.woff2") format("woff2"),
+    url("CoinbaseDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Text";
+  src: url("CoinbaseText-Regular.woff2") format("woff2"),
+    url("CoinbaseText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Display";
+  src: url("CoinbaseDisplay-Regular.woff2") format("woff2"),
+    url("CoinbaseDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Display";
+  src: url("CoinbaseDisplay-Medium.woff2") format("woff2"),
+    url("CoinbaseDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CoinbaseIcons";
+  src: url("CoinbaseIcons.woff2") format("woff2"),
+    url("CoinbaseIcons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Text";
+  src: url("CoinbaseText-Regular.woff2") format("woff2"),
+    url("CoinbaseText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CoinbaseIcons";
+  src: url("CoinbaseIcons.woff2") format("woff2"),
+    url("CoinbaseIcons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CoinbaseIcons";
+  src: url("CoinbaseIcons.woff2") format("woff2"),
+    url("CoinbaseIcons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Text";
+  src: url("CoinbaseText-Medium.woff2") format("woff2"),
+    url("CoinbaseText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coinbase Display";
+  src: url("CoinbaseDisplay-Medium.woff2") format("woff2"),
+    url("CoinbaseDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

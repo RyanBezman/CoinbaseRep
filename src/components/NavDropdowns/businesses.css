@@ -1,9 +1,17 @@
 .businesses-wrapper {
-  height: 100px;
   width: 100%;
   padding: 40px 45px;
   background: rgb(255, 255, 255);
   transition: all 150ms linear 0s, box-shadow 0ms linear 0s;
-  width: 100%;
   border-bottom: 1px solid rgb(236, 239, 241);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  font-size: 16px;
+  position: fixed;
+  z-index: 1;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
 }

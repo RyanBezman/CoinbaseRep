@@ -7,6 +7,7 @@ import { IndividualsDrop } from "../components/NavDropdowns/individuals";
 import { BusinessesDrop } from "../components/NavDropdowns/businesses";
 import { DevelopersDrop } from "../components/NavDropdowns/developersdrop";
 import { CompanyDrop } from "../components/NavDropdowns/companydrop";
+import { MainPage } from "../components/MainPage/mainpage";
 
 export function Home() {
   const [navbarHover, setNavbarHover] = useContext(Context);
@@ -14,12 +15,14 @@ export function Home() {
   return (
     <>
       <Navbar />
+
       {navbarHover === "explore" ? <ExploreDrop /> : null}
       {navbarHover === "learn" ? <LearnDrop /> : null}
       {navbarHover === "individuals" ? <IndividualsDrop /> : null}
       {navbarHover === "businesses" ? <BusinessesDrop /> : null}
       {navbarHover === "developers" ? <DevelopersDrop /> : null}
       {navbarHover === "company" ? <CompanyDrop /> : null}
+      <MainPage />
     </>
   );
 }
