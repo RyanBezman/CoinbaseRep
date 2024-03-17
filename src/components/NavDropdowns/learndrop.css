@@ -21,15 +21,23 @@
   gap: 15px;
   font-weight: bold;
 }
+.list-item-wrapper:hover {
+  cursor: pointer;
+}
 .left-learn {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-family: "Coinbase Sans";
+  font-weight: 500;
+  /* -webkit-font-smoothing: antialiased; */
 }
 .middle-learn {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-family: "Coinbase Sans";
+  font-weight: 500;
 }
 
 .right-learn {
@@ -41,11 +49,20 @@
   max-width: 320px;
 }
 .right-title {
-  font-weight: bold;
+  font-family: "Coinbase Sans";
+  font-weight: 500;
+  font-size: 16px;
+}
+.right-body {
+  font-family: "Coinbase Sans";
+  font-weight: 400;
+  font-size: 16px;
 }
 .right-footer {
   margin-top: 22px;
   color: rgb(0, 82, 255);
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Coinbase Sans";
+  font-weight: 500;
+  font-size: 16px;
 }

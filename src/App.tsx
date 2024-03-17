@@ -3,7 +3,9 @@ import "./App.css";
 import { Home } from "./pages/home";
 import React from "react";
 
-export const Context = React.createContext();
+type ContextValueType = [string, React.Dispatch<React.SetStateAction<string>>];
+
+export const Context = React.createContext<ContextValueType>(["", () => {}]);
 
 function App() {
   const [navbarHover, setNavbarHover] = useState("");

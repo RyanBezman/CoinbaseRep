@@ -1,7 +1,19 @@
+import { useContext } from "react";
 import "./exploredrop.css";
+import { Context } from "../../App";
 export function ExploreDrop() {
+  const [, setNavbarHover] = useContext(Context);
+
   return (
-    <div className="explore-wrapper">
+    <div
+      className="explore-wrapper"
+      onMouseEnter={() => {
+        setNavbarHover("explore");
+      }}
+      onMouseLeave={() => {
+        setNavbarHover("");
+      }}
+    >
       <div className="left-explore">
         <div className="graph-image-wrapper">
           <img

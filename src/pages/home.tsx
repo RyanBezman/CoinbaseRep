@@ -10,7 +10,7 @@ import { CompanyDrop } from "../components/NavDropdowns/companydrop";
 import { MainPage } from "../components/MainPage/mainpage";
 
 export function Home() {
-  const [navbarHover, setNavbarHover] = useContext(Context);
+  const [navbarHover] = useContext(Context);
 
   return (
     <>

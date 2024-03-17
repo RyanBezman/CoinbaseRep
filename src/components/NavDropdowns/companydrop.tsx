@@ -1,7 +1,19 @@
+import { useContext } from "react";
 import "./companydrop.css";
+import { Context } from "../../App";
 export function CompanyDrop() {
+  const [, setNavbarHover] = useContext(Context);
+
   return (
-    <div className="company-wrapper">
+    <div
+      className="company-wrapper"
+      onMouseEnter={() => {
+        setNavbarHover("company");
+      }}
+      onMouseLeave={() => {
+        setNavbarHover("");
+      }}
+    >
       <div className="left-learn">
         <div className="list-item-wrapper">
           <div className="learnarrow">&gt;</div>

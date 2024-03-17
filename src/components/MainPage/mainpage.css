@@ -33,15 +33,22 @@
   max-width: 472px;
   gap: 16px;
   padding-bottom: 24px;
+  flex-wrap: wrap;
 }
 .signup-header {
   font-size: 64px;
+  font-family: "Coinbase Display";
   font-weight: 400;
-  max-width: 390px;
+  line-height: 72px;
+  -webkit-font-smoothing: antialiased;
 }
 .signup-body {
   font-size: 28px;
   line-height: 36px;
+  font-family: "Coinbase Sans1";
+  -webkit-font-smoothing: antialiased;
+
+  font-weight: 400;
 }
 .main-input {
   padding: 17px;
@@ -51,6 +58,7 @@
   font-size: 18px;
   font-weight: 400;
   height: auto;
+  font-family: "Coinbase Sans";
 }
 .main-signup-button {
   height: 56px;
@@ -75,6 +83,7 @@
   font-weight: 600;
   margin: 0;
   font-size: 14px;
+  font-family: "Coinbase Sans";
 }
 .main-signup-p-wrapper {
   display: flex;
@@ -87,4 +96,7 @@
   font-weight: 400;
   margin-bottom: 24px;
   margin-top: 0;
+  font-family: "Coinbase Sans";
+  -webkit-font-smoothing: antialiased;
+  color: rgb(10, 11, 13);
 }

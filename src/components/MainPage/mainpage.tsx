@@ -1,4 +1,5 @@
 import "./mainpage.css";
+import "../../fonts/transfonter.org-20240315-030107/stylesheet.css";
 
 export function MainPage() {
   return (
@@ -12,7 +13,7 @@ export function MainPage() {
         </div>
         <div className="main-signup">
           <div className="main-signup-p-wrapper">
-            <div className="signup-header">The Future of money is here</div>
+            <div className="signup-header">The future of money is here</div>
             <div className="signup-body">
               We're the most trusted place for people and businesses to buy,
               sell, and manage crypto

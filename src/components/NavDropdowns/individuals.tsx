@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { DropdownButton } from "../Buttons/dropdownbutton";
 import "./individuals.css";
+import { Context } from "../../App";
 type DropdownButtonProps = {
   img: string;
   top: string;
@@ -66,8 +68,18 @@ const individualsRightColumn: DropdownButtonProps[] = [
 ];
 
 export function IndividualsDrop() {
+  const [, setNavbarHover] = useContext(Context);
+
   return (
-    <div className="individuals-wrapper">
+    <div
+      className="individuals-wrapper"
+      onMouseEnter={() => {
+        setNavbarHover("individuals");
+      }}
+      onMouseLeave={() => {
+        setNavbarHover("");
+      }}
+    >
       <div className="left-explore">
         {individualsLeftColumn.map((info) => {
           return (

@@ -24,6 +24,9 @@ export function Navbar() {
             onMouseEnter={() => {
               setNavbarHover("explore");
             }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
           >
             <span>Explore</span>
           </div>
@@ -32,6 +35,9 @@ export function Navbar() {
             onMouseEnter={() => {
               setNavbarHover("learn");
             }}
+            onMouseLeave={() => {
+              setNavbarHover("");
+            }}
           >
             <span>Learn</span>
           </div>
@@ -39,6 +45,9 @@ export function Navbar() {
             className="navlinks individuals"
             onMouseEnter={() => {
               setNavbarHover("individuals");
+            }}
+            onMouseLeave={() => {
+              setNavbarHover("");
             }}
           >
             <span>Individuals</span>
