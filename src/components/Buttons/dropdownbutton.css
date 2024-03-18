@@ -1,0 +1,7 @@
+.graph-image-wrapper:hover .top-reference {
+  color: rgb(0, 82, 255);
+}
+
+.graph-image-wrapper:hover .bottom-reference {
+  color: black;
+}

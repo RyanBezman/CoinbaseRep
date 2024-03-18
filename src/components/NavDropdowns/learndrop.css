@@ -23,6 +23,7 @@
 }
 .list-item-wrapper:hover {
   cursor: pointer;
+  color: #0667d0;
 }
 .left-learn {
   display: flex;
@@ -65,4 +66,7 @@
   font-family: "Coinbase Sans";
   font-weight: 500;
   font-size: 16px;
+}
+.right-footer:hover {
+  color: #0667d0;
 }

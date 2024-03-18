@@ -6,7 +6,7 @@ import { Context } from "../../App";
 import { useContext } from "react";
 
 export function Navbar() {
-  const [navbarHover, setNavbarHover] = useContext(Context);
+  const [, setNavbarHover] = useContext(Context);
 
   return (
     <div className="navbar-header">

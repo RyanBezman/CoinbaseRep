@@ -1,7 +1,10 @@
 import "./mainpage.css";
 import "../../fonts/transfonter.org-20240315-030107/stylesheet.css";
+import { useState } from "react";
 
 export function MainPage() {
+  const [email, setEmail] = useState("");
+  console.log(email);
   return (
     <div className="main-wrapper">
       <div className="main-centered">
@@ -27,6 +30,9 @@ export function MainPage() {
               name="email"
               placeholder="satoshi@nakamoto.com"
               className="main-input"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
             <button className="main-signup-button">Sign up</button>
           </div>

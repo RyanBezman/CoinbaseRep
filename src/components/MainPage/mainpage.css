@@ -9,15 +9,17 @@
   display: flex;
 }
 .phonescreen-wrapper {
-  /* min-width: 636px; */
+  min-width: 636px;
   height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .phone-pic {
-  max-width: 644px;
-  max-height: 636px;
+  /* max-width: 644px;
+  max-height: 636px; */
+  height: auto;
+  width: 100%;
 }
 .main-signup {
   display: flex;
@@ -99,4 +101,9 @@
   font-family: "Coinbase Sans";
   -webkit-font-smoothing: antialiased;
   color: rgb(10, 11, 13);
+}
+@media (max-width: 1091px) {
+  .phonescreen-wrapper {
+    min-width: unset;
+  }
 }

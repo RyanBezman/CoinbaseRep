@@ -9,6 +9,8 @@ export const Context = React.createContext<ContextValueType>(["", () => {}]);
 
 function App() {
   const [navbarHover, setNavbarHover] = useState("");
+  // const [email, setEmail] = useState('');
+
   return (
     <>
       <Context.Provider value={[navbarHover, setNavbarHover]}>
