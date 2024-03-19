@@ -15,9 +15,7 @@ export function Home() {
   return (
     <>
       <Navbar />
-
       {navbarHover === "explore" ? <ExploreDrop /> : null}
-
       {navbarHover === "learn" ? <LearnDrop /> : null}
       {navbarHover === "individuals" ? <IndividualsDrop /> : null}
       {navbarHover === "businesses" ? <BusinessesDrop /> : null}

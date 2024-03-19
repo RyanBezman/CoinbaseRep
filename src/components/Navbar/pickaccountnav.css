@@ -1,0 +1,46 @@
+.pickaccount-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(91, 97, 110, 0.2);
+  height: 70.3906px;
+}
+.pickaccountnav {
+  display: flex;
+  max-width: 1150px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.coinbase-logo-two {
+  width: 98px;
+}
+.alreadyhave-wrapper {
+  display: flex;
+  align-items: center;
+}
+.alreadyhave {
+  font-size: 14px;
+  font-family: "Coinbase Sans";
+  font-weight: 400;
+}
+.signin-square {
+  text-align: center;
+  border: 1px solid rgb(206, 210, 219);
+  height: 42px;
+  color: rgb(10, 11, 13);
+  border-radius: 4px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}

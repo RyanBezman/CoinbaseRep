@@ -4,6 +4,7 @@ import { Banner } from "./banner";
 import "./navbar.css";
 import { Context } from "../../App";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [, setNavbarHover] = useContext(Context);
@@ -104,8 +105,12 @@ export function Navbar() {
                 />
               </svg>
             </div>
-            <SignIn />
-            <SignUp />
+            <Link to="/signin" style={{ textDecoration: "none" }}>
+              <SignIn />
+            </Link>
+            <Link to="/pickyouraccount" style={{ textDecoration: "none" }}>
+              <SignUp />
+            </Link>
           </div>
         </div>
       </div>

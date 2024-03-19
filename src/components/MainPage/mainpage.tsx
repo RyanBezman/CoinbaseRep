@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export function MainPage() {
   const [email, setEmail] = useState("");
-  console.log(email);
   return (
     <div className="main-wrapper">
       <div className="main-centered">

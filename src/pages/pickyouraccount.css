@@ -1,0 +1,210 @@
+.pickyouraccountwrapper {
+  height: 100%;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 48px;
+}
+.bottompickaccount {
+  display: flex;
+  justify-content: center;
+}
+.welcome-wrapper {
+  max-width: 1150px;
+  width: 100%;
+  display: flex;
+}
+.signup-optionone {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.signup-optiontwo {
+  display: flex;
+}
+.button-numbered {
+  height: 32px;
+  width: 32px;
+  border-radius: 1000px;
+  border: none;
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-right: 24px;
+}
+.button-numberedtwo {
+  height: 32px;
+  width: 32px;
+  border-radius: 1000px;
+  border: none;
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 24px;
+}
+
+.textsignupone-wrapper {
+  display: flex;
+  gap: 45px;
+}
+.explorebutton {
+  height: 40px;
+  width: 93.8125px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(0, 82, 255);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+.explorebutton:hover {
+  background-color: rgb(1, 76, 236);
+}
+.textsignuptitle {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Coinbase Sans";
+  margin: 0;
+}
+.textsignuptitletwo {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Coinbase Sans";
+  margin: 0;
+  padding-bottom: 16px;
+}
+.textsignupbottom {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  color: rgb(91, 97, 110);
+  margin: 0;
+  padding-top: 8px;
+}
+.welcometext {
+  margin: 0;
+  padding-top: 40px;
+  font-size: 28px;
+  font-family: "Coinbase Display";
+  font-weight: 500;
+}
+.textsignuptwo-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.individual-box {
+  min-height: 130px;
+  border: 2px solid rgba(91, 97, 110, 0.2);
+  display: flex;
+  border-radius: 10px;
+  max-width: 524px;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.individual-text {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.individual-title {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Coinbase Sans";
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+.individual-bottom {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Coinbase Sans";
+  font-weight: 400;
+  color: rgb(91, 97, 110);
+}
+.individual-personlogo {
+  height: 64px;
+  width: 64px;
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  margin-right: 40px;
+}
+.getstarted-button {
+  margin-left: 56px;
+  margin-top: 15px;
+  max-width: 524px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  border-radius: 8px;
+  background-color: rgb(0, 82, 255);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Coinbase Sans";
+  border: none;
+}
+.getstarted-button:hover {
+  background-color: rgb(1, 76, 236);
+  cursor: pointer;
+}
+
+.selected {
+  border-color: rgb(23, 75, 250);
+}
+.accountsidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 383px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sidebarinforow {
+  display: flex;
+  padding-bottom: 32px;
+}
+.sidebarinfotop {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Coinbase Sans";
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+.sidebarinfobottom {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Coinbase Sans";
+  font-weight: 400;
+  color: rgb(91, 97, 110);
+}
+.sidebartitle {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Coinbase Sans";
+  font-weight: 400;
+  padding-bottom: 32px;
+}
+.pickaccount-righthalf {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.sidebarinfotextwrapper {
+  padding-left: 8px;
+}
+.globe-container-account {
+  padding: 8px;
+}
+.account {
+  color: blue;
+}
