@@ -1,0 +1,170 @@
+.signup-page-bottomhalf {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+}
+.signup-main {
+  /* padding-left: 64px;
+  padding-right: 64px; */
+  display: flex;
+  max-width: 1133px;
+  width: 100%;
+  gap: 80px;
+}
+.left-arrow-button {
+  min-width: 40px;
+  border-radius: 1000px;
+  height: 40px;
+  border: none;
+  padding: 0;
+}
+.signup-arrow-wrapper {
+  height: 100%;
+  margin-right: 40px;
+}
+.signup-left {
+  display: flex;
+  width: 100%;
+}
+.createaccount-title {
+  font-family: "Coinbase Display";
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.createaccount-body {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  color: rgb(91, 97, 110);
+}
+.createaccount-footer {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+.legalfirst-wrapper {
+  flex: 1;
+}
+.firstandlastwrapper {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+.legal-first-name {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Coinbase Sans";
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+.legalname-input {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(91, 97, 110, 0.66);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  width: 100%;
+}
+.legailemail-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+.legalemail-text {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Coinbase Sans";
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+.legalemail-input {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(91, 97, 110, 0.66);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  width: 100%;
+}
+.agreement-checkbox {
+  height: 22px;
+  width: 22px;
+  margin: 0;
+}
+.useragreement-wrapper {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-top: 8px;
+}
+.agreement-body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  line-height: 24px;
+}
+.freeaccount-button {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  background-color: rgb(128, 169, 255);
+  color: white;
+  height: 56px;
+  border-radius: 56px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Coinbase Sans";
+}
+.signupfor-business {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Coinbase Sans";
+}
+.us-disclosures-data {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Coinbase Sans";
+  text-align: center;
+  color: rgb(92, 97, 110);
+}
+.signup-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 56px;
+  gap: 14px;
+  width: 500px;
+}
+.right-signup-header {
+  font-family: "Coinbase Display";
+  font-size: 48px;
+  line-height: 56px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 444px;
+  -webkit-font-smoothing: antialiased;
+}
+.see-terms {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+  padding-bottom: 8px;
+  color: rgb(91, 97, 110);
+  width: 70%;
+  text-align: start;
+}
+.dollarsign-image {
+  height: 240px;
+  width: 240px;
+}

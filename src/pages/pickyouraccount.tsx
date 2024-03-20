@@ -3,6 +3,7 @@ import { IndividualButton } from "../components/Buttons/individualbutton";
 import { PickAccountNav } from "../components/Navbar/pickaccountnav";
 import "./pickyouraccount.css";
 import { AccountInfo } from "../components/AccountInfo/accountinfo";
+import { Link } from "react-router-dom";
 
 type boxInfo = {
   title: string;
@@ -99,7 +100,9 @@ export function PickYourAccount() {
                 </div>
               </div>
             </div>
-            <button className="getstarted-button">Get Started</button>
+            <Link to="/signup" style={{ textDecoration: "none" }}>
+              <button className="getstarted-button">Get Started</button>
+            </Link>
           </div>
           {accountType === "Individual" ? (
             <div className="pickaccount-righthalf">

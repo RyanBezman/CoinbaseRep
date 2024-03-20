@@ -12,13 +12,14 @@
   padding-top: 40px;
   padding-right: 40px;
   padding-left: 40px;
+  padding-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
 .coinbase-logo-signinpage {
   width: 126px;
 }
-.coinbase-logo-wrapper {
+.coinbase-logo-wrap {
   padding-bottom: 56px;
 }
 .signin-header-wrapper {
@@ -68,4 +69,84 @@
   display: flex;
   width: 100%;
   padding-top: 16px;
+}
+.or {
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-size: 13px;
+  font-family: "Coinbase Sans";
+  font-weight: 400;
+}
+.alternate-signins-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.google-logo {
+  height: 18px;
+  width: 16px;
+}
+.google-signin {
+  width: 300px;
+  height: 40px;
+  max-width: 400px;
+  border-radius: 20px;
+  border: 1px solid rgba(91, 97, 110, 0.2);
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  cursor: pointer;
+}
+.google-text {
+  flex-grow: 1;
+  color: rgb(60, 64, 67);
+  font-family: "Coinbase Sans";
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.apple-signin {
+  background-color: rgb(238, 240, 243);
+  border-radius: 1000px;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 16px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.apple-signin:hover {
+  background-color: rgb(233, 235, 238);
+}
+.google-signin:hover {
+  background-color: rgb(248, 250, 254);
+}
+.apple-text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Coinbase Sans";
+}
+.signin-footernotes {
+  margin: 0;
+  font-size: 13px;
+  font-family: "Coinbase Text";
+  font-weight: 400;
+}
+.footernotes-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  gap: 5px;
+  padding-bottom: 40px;
+}
+.blue {
+  color: rgb(0, 82, 255);
 }

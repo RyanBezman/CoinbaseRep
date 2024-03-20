@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./pickaccountnav.css";
 export function PickAccountNav() {
   return (
@@ -9,7 +10,9 @@ export function PickAccountNav() {
         />
         <div className="alreadyhave-wrapper">
           <p className="alreadyhave">Already have an account?</p>
-          <button className="signin-square">Sign In</button>
+          <Link to="/signin" style={{ textDecoration: "none" }}>
+            <button className="signin-square">Sign In</button>
+          </Link>
         </div>
       </nav>
     </div>
