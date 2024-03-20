@@ -68,6 +68,7 @@ export function DevelopersDrop() {
               img={info.img}
               top={info.top}
               bottom={info.bottom}
+              key={info.top}
             />
           );
         })}
@@ -79,6 +80,7 @@ export function DevelopersDrop() {
               img={info.img}
               top={info.top}
               bottom={info.bottom}
+              key={info.top}
             />
           );
         })}

@@ -1,9 +1,17 @@
 import "./mainpage.css";
 import "../../fonts/transfonter.org-20240315-030107/stylesheet.css";
-import { useState } from "react";
+import { ChangeEvent, useContext } from "react";
+import { SignupContext } from "../../contexts/signupcontext";
+import { Link } from "react-router-dom";
 
 export function MainPage() {
-  const [email, setEmail] = useState("");
+  const { signupData, setSignUpData } = useContext(SignupContext);
+
+  const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setSignUpData({ ...signupData, [name]: value });
+  };
+  console.log(signupData);
   return (
     <div className="main-wrapper">
       <div className="main-centered">
@@ -27,13 +35,14 @@ export function MainPage() {
             <input
               type="email"
               name="email"
+              value={signupData.email}
               placeholder="satoshi@nakamoto.com"
               className="main-input"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              onChange={handleSignUpForm}
             />
-            <button className="main-signup-button">Sign up</button>
+            <Link to="/signup" style={{ textDecoration: "none" }}>
+              <button className="main-signup-button">Sign up</button>
+            </Link>
           </div>
           <p className="signup-reward">Sign up and get up to $200 in crypto¹</p>
         </div>

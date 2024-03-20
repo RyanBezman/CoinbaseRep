@@ -87,6 +87,7 @@ export function IndividualsDrop() {
               img={info.img}
               top={info.top}
               bottom={info.bottom}
+              key={info.top}
             />
           );
         })}
@@ -98,6 +99,7 @@ export function IndividualsDrop() {
               img={info.img}
               top={info.top}
               bottom={info.bottom}
+              key={info.top}
             />
           );
         })}

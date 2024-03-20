@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PickYourAccount } from "./pages/pickyouraccount";
 import { SignIn } from "./pages/signin";
 import { SignUpPage } from "./pages/signuppage";
+import SignupContextProvider from "./contexts/signupcontext";
+import SignInContextProvider from "./contexts/signincontext";
 
 type ContextValueType = [string, React.Dispatch<React.SetStateAction<string>>];
 
@@ -17,14 +19,18 @@ function App() {
   return (
     <>
       <Context.Provider value={[navbarHover, setNavbarHover]}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pickyouraccount" element={<PickYourAccount />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUpPage />} />
-          </Routes>
-        </Router>
+        <SignupContextProvider>
+          <SignInContextProvider>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/pickyouraccount" element={<PickYourAccount />} />
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/signup" element={<SignUpPage />} />
+              </Routes>
+            </Router>
+          </SignInContextProvider>
+        </SignupContextProvider>
       </Context.Provider>
     </>
   );

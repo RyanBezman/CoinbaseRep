@@ -1,4 +1,14 @@
+import { ChangeEvent, useContext } from "react";
+import { SignupContext } from "../../contexts/signupcontext";
+
 export function CreateAccount() {
+  const { signupData, setSignUpData } = useContext(SignupContext);
+  console.log(signupData);
+
+  const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setSignUpData({ ...signupData, [name]: value });
+  };
   return (
     <form>
       <div className="firstandlastwrapper">
@@ -8,6 +18,9 @@ export function CreateAccount() {
             type="text"
             placeholder="Legal first name"
             className="legalname-input"
+            name="first"
+            value={signupData.first}
+            onChange={handleSignUpForm}
             required
           />
         </div>
@@ -18,6 +31,9 @@ export function CreateAccount() {
             type="text"
             placeholder="Legal last name"
             className="legalname-input"
+            name="last"
+            value={signupData.last}
+            onChange={handleSignUpForm}
             required
           />
         </div>
@@ -29,6 +45,9 @@ export function CreateAccount() {
             type="text"
             placeholder="Email"
             className="legalemail-input"
+            name="email"
+            value={signupData.email}
+            onChange={handleSignUpForm}
             required
           />
         </div>
@@ -38,6 +57,9 @@ export function CreateAccount() {
             type="text"
             placeholder="Minimum 8 characters"
             className="legalemail-input"
+            name="password"
+            value={signupData.password}
+            onChange={handleSignUpForm}
             required
           />
         </div>

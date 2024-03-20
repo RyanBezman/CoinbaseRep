@@ -94,6 +94,7 @@ export function PickYourAccount() {
                         img={info.img}
                         accountType={setAccountType}
                         isSelected={accountType === info.title}
+                        key={info.title}
                       />
                     );
                   })}
@@ -113,7 +114,13 @@ export function PickYourAccount() {
                 </h3>
                 <div className="sidebarinfo">
                   {individualAccountInfo.map((info) => {
-                    return <AccountInfo top={info.top} bottom={info.bottom} />;
+                    return (
+                      <AccountInfo
+                        top={info.top}
+                        bottom={info.bottom}
+                        key={info.top}
+                      />
+                    );
                   })}
                 </div>
               </div>
@@ -129,7 +136,13 @@ export function PickYourAccount() {
                 </h3>
                 <div className="sidebarinfo">
                   {businessAccountInfo.map((info) => {
-                    return <AccountInfo top={info.top} bottom={info.bottom} />;
+                    return (
+                      <AccountInfo
+                        top={info.top}
+                        bottom={info.bottom}
+                        key={info.top}
+                      />
+                    );
                   })}
                 </div>
               </div>

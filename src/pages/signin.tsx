@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import "./signin.css";
+import { ChangeEvent, useContext } from "react";
+import { SignInContext } from "../contexts/signincontext";
 export function SignIn() {
+  const { signInData, setSignInData } = useContext(SignInContext);
+
+  const handleSignIn = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+
+    setSignInData({ ...signInData, [name]: value });
+  };
+  console.log(signInData);
   return (
     <div className="signin-wrapper">
       <div className="signin-box">
@@ -19,8 +29,11 @@ export function SignIn() {
         <div className="signin-inputtop">Email</div>
         <input
           type="email"
+          name="email"
+          value={signInData.email || ""}
           placeholder="Your email address"
           className="signin-email-input"
+          onChange={handleSignIn}
         />
         <div className="continuebuttonwrapper">
           <button className="continue-button">Continue</button>
