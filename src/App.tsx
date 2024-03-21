@@ -8,6 +8,7 @@ import { SignIn } from "./pages/signin";
 import { SignUpPage } from "./pages/signuppage";
 import SignupContextProvider from "./contexts/signupcontext";
 import SignInContextProvider from "./contexts/signincontext";
+import Axios from "axios";
 
 type ContextValueType = [string, React.Dispatch<React.SetStateAction<string>>];
 
@@ -15,6 +16,10 @@ export const Context = React.createContext<ContextValueType>(["", () => {}]);
 
 function App() {
   const [navbarHover, setNavbarHover] = useState("");
+
+  const addUser = () => {
+    Axios.post("localhost:3001/signup", {});
+  };
 
   return (
     <>

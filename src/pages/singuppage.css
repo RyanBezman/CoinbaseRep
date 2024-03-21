@@ -17,6 +17,7 @@
   height: 40px;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 .signup-arrow-wrapper {
   height: 100%;

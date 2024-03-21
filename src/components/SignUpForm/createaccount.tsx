@@ -1,5 +1,6 @@
 import { ChangeEvent, useContext } from "react";
 import { SignupContext } from "../../contexts/signupcontext";
+import Axios from "axios";
 
 export function CreateAccount() {
   const { signupData, setSignUpData } = useContext(SignupContext);
@@ -8,6 +9,18 @@ export function CreateAccount() {
   const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setSignUpData({ ...signupData, [name]: value });
+  };
+
+  const addUser = (e: SubmitEvent) => {
+    e.preventDefault();
+    Axios.post("http://localhost:3001/signup", {
+      firstName: signupData.first,
+      lastName: signupData.last,
+      email: signupData.email,
+      password: signupData.password,
+    }).then(() => {
+      console.log("Signed up a new user");
+    });
   };
   return (
     <form>
@@ -42,7 +55,7 @@ export function CreateAccount() {
         <div className="legailemail-wrapper">
           <div className="legalemail-text">Email*</div>
           <input
-            type="text"
+            type="email"
             placeholder="Email"
             className="legalemail-input"
             name="email"
@@ -58,6 +71,7 @@ export function CreateAccount() {
             placeholder="Minimum 8 characters"
             className="legalemail-input"
             name="password"
+            minLength={8}
             value={signupData.password}
             onChange={handleSignUpForm}
             required
@@ -75,7 +89,9 @@ export function CreateAccount() {
           <span className="blue"> Financial Privacy Notice</span>.
         </div>
       </div>
-      <button className="freeaccount-button">Create free account</button>
+      <button className="freeaccount-button" onClick={addUser}>
+        Create free account
+      </button>
     </form>
   );
 }

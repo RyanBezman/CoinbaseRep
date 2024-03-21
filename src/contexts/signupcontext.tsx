@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { ReactNode, createContext, useState } from "react";
 
 type SignupForm = {
   first: string;
@@ -18,7 +18,13 @@ const initialSignupData = {
   email: "",
   password: "",
 };
-export default function SignupContextProvider({ children }) {
+
+type SignupContextProviderProps = {
+  children: ReactNode;
+};
+export default function SignupContextProvider({
+  children,
+}: SignupContextProviderProps) {
   const [signupData, setSignUpData] = useState(initialSignupData);
 
   return (

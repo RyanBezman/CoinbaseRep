@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SignUpNav } from "../components/Navbar/signupnav";
 import { CreateAccount } from "../components/SignUpForm/createaccount";
 import "./singuppage.css";
@@ -9,17 +10,19 @@ export function SignUpPage() {
         <div className="signup-main">
           <div className="signup-left">
             <div className="signup-arrow-wrapper">
-              <button className="left-arrow-button">
-                <svg
-                  width="16"
-                  height="16"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                >
-                  <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
-                </svg>
-              </button>
+              <Link to="/pickyouraccount">
+                <button className="left-arrow-button">
+                  <svg
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                  >
+                    <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+                  </svg>
+                </button>
+              </Link>
             </div>
             <div className="left-main-wrapper">
               <div className="createaccount-title">Create an account</div>
