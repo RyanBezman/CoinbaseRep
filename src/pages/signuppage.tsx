@@ -38,7 +38,7 @@ export function SignUpPage() {
                 <span className="blue"> Sign up</span> for a business account
               </div>
               <div className="us-disclosures-data">
-                For information on how we use your data see.{" "}
+                For information on how we use your data see.
                 <span className="blue">US Disclosures</span>
               </div>
             </div>

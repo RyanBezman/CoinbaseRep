@@ -1,0 +1,35 @@
+.user-navbutton-wrapper {
+  list-style: none;
+  padding: 16px;
+  height: 56px;
+  text-align: start;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+.user-navbutton-wrapper:hover {
+  background-color: rgb(240, 243, 250);
+}
+.house-logo {
+  fill: blue;
+  height: 24px;
+  width: 24px;
+}
+.houselogowrap {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+}
+.usernavbutton-text {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(0, 82, 255);
+  white-space: nowrap;
+}
