@@ -10,9 +10,10 @@ type SignupForm = {
 type SignUpContextType = {
   signupData: SignupForm;
   setSignUpData: (p: SignupForm) => void;
+  initialSignupData: SignupForm;
 };
 export const SignupContext = createContext<SignUpContextType | null>(null);
-const initialSignupData = {
+const initialSignupData: SignupForm = {
   first: "",
   last: "",
   email: "",
@@ -28,7 +29,9 @@ export default function SignupContextProvider({
   const [signupData, setSignUpData] = useState(initialSignupData);
 
   return (
-    <SignupContext.Provider value={{ signupData, setSignUpData }}>
+    <SignupContext.Provider
+      value={{ signupData, setSignUpData, initialSignupData }}
+    >
       {children}
     </SignupContext.Provider>
   );

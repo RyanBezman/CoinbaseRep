@@ -3,7 +3,8 @@ import { SignupContext } from "../../contexts/signupcontext";
 import Axios from "axios";
 
 export function CreateAccount() {
-  const { signupData, setSignUpData } = useContext(SignupContext);
+  const { signupData, setSignUpData, initialSignupData } =
+    useContext(SignupContext);
   console.log(signupData);
 
   const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,6 +21,7 @@ export function CreateAccount() {
       password: signupData.password,
     }).then(() => {
       console.log("Signed up a new user");
+      setSignUpData(initialSignupData);
     });
   };
   return (

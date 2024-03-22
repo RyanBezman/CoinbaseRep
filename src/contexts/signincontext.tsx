@@ -4,10 +4,19 @@ type SignInForm = {
   email: string;
   password: string;
 };
+type User = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+};
 
 type SignInContextType = {
   signInData: SignInForm;
   setSignInData: (p: SignInForm) => void;
+  user: User | null;
+  setUser: (p: User) => void;
 };
 export const SignInContext = createContext<SignInContextType | null>(null);
 const initialSignInData = {
@@ -21,9 +30,12 @@ export default function SignInContextProvider({
   children,
 }: SignInContextProviderProps) {
   const [signInData, setSignInData] = useState(initialSignInData);
+  const [user, setUser] = useState<User | null>(null);
 
   return (
-    <SignInContext.Provider value={{ signInData, setSignInData }}>
+    <SignInContext.Provider
+      value={{ signInData, setSignInData, user, setUser }}
+    >
       {children}
     </SignInContext.Provider>
   );
