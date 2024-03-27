@@ -8,7 +8,6 @@ import { SignIn } from "./pages/signin";
 import { SignUpPage } from "./pages/signuppage";
 import SignupContextProvider from "./contexts/signupcontext";
 import SignInContextProvider from "./contexts/signincontext";
-import Axios from "axios";
 import { UserPage } from "./pages/userpage";
 
 type ContextValueType = [string, React.Dispatch<React.SetStateAction<string>>];

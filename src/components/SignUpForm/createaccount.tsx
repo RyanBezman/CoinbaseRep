@@ -25,7 +25,7 @@ export function CreateAccount() {
     });
   };
   return (
-    <form>
+    <form onSubmit={addUser}>
       <div className="firstandlastwrapper">
         <div className="legalfirst-wrapper">
           <div className="legal-first-name">Legal first name*</div>
@@ -91,7 +91,7 @@ export function CreateAccount() {
           <span className="blue"> Financial Privacy Notice</span>.
         </div>
       </div>
-      <button className="freeaccount-button" onClick={addUser}>
+      <button className="freeaccount-button" type="submit">
         Create free account
       </button>
     </form>

@@ -1,11 +1,13 @@
 .top-bar-wrapper {
   display: flex;
-  border: 1px solid black;
+  justify-content: space-between;
+  border: 1px solid rgb(222, 223, 226);
+  border-left: none;
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
   width: 100%;
-  max-height: 72px;
+  height: 76px;
 }
 .top-bar-left {
   display: flex;
@@ -13,7 +15,106 @@
   font-size: 20px;
   font-weight: 500;
   color: rgb(10, 11, 13);
+  width: 50%;
+  padding-top: 8px;
+  -webkit-font-smoothing: antialiased;
 }
 .top-bar-right {
   display: flex;
+  flex: 1;
+  gap: 8px;
+}
+.top-input-wrapper {
+  border-radius: 16px;
+  background-color: rgb(238, 240, 243);
+  display: flex;
+  align-items: center;
+  height: 42px;
+  width: 298px;
+  display: flex;
+  gap: 4px;
+  margin-right: 16px;
+}
+.asset-input {
+  background-color: transparent;
+  border: none;
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 400;
+}
+.magnifying-input-logo {
+  height: 20px;
+  width: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.buy-sell-button {
+  height: 40px;
+  background-color: rgb(0, 82, 255);
+  white-space: nowrap;
+  color: white;
+  border-radius: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Coinbase Sans";
+  -webkit-font-smoothing: antialiased;
+}
+.transfer-button {
+  height: 40px;
+  background-color: rgb(211, 225, 255);
+  white-space: nowrap;
+  color: rgb(0, 75, 235);
+  border-radius: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-right: 20px;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Coinbase Sans";
+  -webkit-font-smoothing: antialiased;
+}
+
+.bell-buttons {
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(238, 240, 243);
+}
+.bell-icon {
+  height: 60%;
+  width: 60%;
+}
+.more-icon {
+  height: 50%;
+}
+.profile-button {
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 123, 179);
+  color: white;
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 400;
 }
