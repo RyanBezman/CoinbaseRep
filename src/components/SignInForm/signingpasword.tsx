@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import "./signinpassword.css";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 type User = {
   id: number;
@@ -25,6 +26,8 @@ export function SignInPassword({
 }: SignInPasswordProps) {
   const [error, setError] = useState(null);
 
+  const navigate = useNavigate();
+
   const handleLoginSubmit = () => {
     Axios.get("http://localhost:3001/signin", {
       params: {
@@ -35,8 +38,10 @@ export function SignInPassword({
       .then((res) => {
         console.log(res.data);
         window.localStorage.setItem("token", res.data.token);
+        window.localStorage.setItem("name", res.data.user.firstName);
         setError(null);
         setUser(res.data.user);
+        navigate("/user");
       })
       .catch((error) => {
         // console.log(error.response.data.error);

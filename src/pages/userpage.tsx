@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   BalanceDisplay,
+  StoriesCard,
+  TopStories,
   WatchlistDisplay,
 } from "../components/UserHome/middlecomponents";
 import {
@@ -11,6 +13,8 @@ import {
 import { UserSidebar } from "../components/UserHome/usersidebar";
 import { UserTopBar } from "../components/UserHome/usertopbar";
 import "./userpage.css";
+import Axios from "axios";
+import { SignInContext } from "../contexts/signincontext";
 
 type ScrollInfoList = {
   title: string;
@@ -33,7 +37,7 @@ const scrollInfo: ScrollInfoList[] = [
     link: `Verfiy now`,
   },
   {
-    title: "VIPS from another Exchange?",
+    title: "VIPs from another Exchange?",
     body: `Fast-track to as low as 0% spot fees on Coinbase Advanced`,
     img: `//ctf-images-01.coinbasecdn.net/q5ulk4bp65r7/7Etne5g9aDFt9RCNwJjIeH/8797ef7c4b0cee15d5377f1d106abf5e/adv_light.png`,
     link: `Apply now`,
@@ -42,10 +46,18 @@ const scrollInfo: ScrollInfoList[] = [
 
 export function UserPage() {
   const [scrollDisplay, setScrollDisplay] = useState(0);
+  const [stories, setStories] = useState([]);
+
+  useEffect(() => {
+    Axios.get("http://localhost:3001/stories").then((response) => {
+      setStories(response.data);
+    });
+  }, []);
 
   function handleForwardScroll(count: number) {
     if (count === scrollInfo.length - 1) {
       setScrollDisplay(0);
+      console.log(stories);
     } else {
       setScrollDisplay((prev) => {
         return prev + 1;
@@ -61,15 +73,47 @@ export function UserPage() {
       });
     }
   }
+
+  type StoryData = {
+    image: string;
+    company: string;
+    date: string;
+    title: string;
+    body: string;
+    ticker: string;
+    percent: number;
+    id: number;
+  };
+
+  const { user } = useContext(SignInContext);
+
   return (
     <div className="userpage-wrapper">
       <UserSidebar />
       <div className="middle-wrapper">
-        <UserTopBar />
+        <UserTopBar name={user.firstName} />
         <div className="main-wrapper">
           <div className="bottom-mid-wrapper">
             <BalanceDisplay />
             <WatchlistDisplay />
+            <TopStories />
+            <div className="stories-wrapper">
+              {stories.map((story: StoryData) => {
+                return (
+                  <StoriesCard
+                    key={story.id}
+                    id={story.id}
+                    image={story.image}
+                    company={story.company}
+                    date={story.date}
+                    title={story.title}
+                    body={story.body}
+                    ticker={story.ticker}
+                    percent={story.percent}
+                  />
+                );
+              })}
+            </div>
           </div>
           <div className="right-sidebar-wrapper">
             <TopRightSidebar

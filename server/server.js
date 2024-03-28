@@ -39,6 +39,24 @@ const query = (sqlString, args) => {
   });
 };
 
+app.get("/stories", async (req, res) => {
+  try {
+    const stories = await new Promise((resolve, reject) => {
+      db.query("SELECT * FROM stories", (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    });
+    res.json(stories);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Trouble grabbbing stories");
+  }
+});
+
 app.post("/signup", async (req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;

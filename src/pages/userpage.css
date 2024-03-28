@@ -5,6 +5,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 240px;
 }
 .bottom-mid-wrapper {
   flex: 1;
@@ -57,7 +58,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: 32px;
-  padding-left: 32px;
+  padding-left: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -89,12 +90,14 @@
 }
 .main-wrapper {
   display: flex;
+  margin-left: 5px;
 }
 .right-sidebar-wrapper {
   min-width: 380px;
   display: flex;
   flex-direction: column;
   border-left: 1px solid rgb(222, 223, 226);
+  padding-right: 24px;
 }
 .top-right-sidebar {
   padding: 16px;
@@ -142,6 +145,7 @@
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 16px;
+  min-height: 161px;
 }
 .scroll-options-left {
   display: flex;
@@ -260,4 +264,223 @@
   -webkit-font-smoothing: antialiased;
   display: flex;
   justify-content: flex-end;
+}
+.stock-logo-info {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  padding-left: 32px;
+}
+.stock-logo {
+  height: 32px;
+  width: 32px;
+}
+.stock-words {
+  display: flex;
+  flex-direction: column;
+  padding-right: 70px;
+}
+.stock-words-top {
+  color: rgb(10, 11, 13);
+  line-height: 24px;
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+.stock-words-bottom {
+  color: rgb(91, 97, 110);
+  font-family: "Coinbase Sans";
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.bottom-watchlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  padding-left: 12px;
+}
+.watchlist-price {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.watchlist-percent {
+  color: rgb(9, 133, 81);
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.watchlist-marketcap {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.option-to-buy {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(0, 82, 255);
+}
+.star {
+  height: 18px;
+  width: 18px;
+  color: rgb(0, 82, 255);
+}
+.star-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.menurows {
+  height: 16px;
+  width: 16px;
+}
+.topstories-wrapper {
+  display: flex;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  font-family: "Coinbase Sans";
+  font-size: 20px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+.stories-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+  gap: 32px;
+}
+.storiescard-wrapper {
+  display: flex;
+  flex: 1;
+  gap: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.storiescard-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  height: 181px;
+  min-height: 181px;
+  min-width: 236px;
+  width: 236px;
+  border: 1px solid rgba(91, 97, 110, 0.2);
+  cursor: pointer;
+  object-fit: cover;
+}
+.stories-img {
+  height: 181px;
+  width: 236px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.storiescard-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  cursor: pointer;
+}
+.card-top-text {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+.card-news {
+  font-family: "Coinbase Text";
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(91, 97, 110);
+  -webkit-font-smoothing: antialiased;
+}
+.time-posted {
+  font-family: "Coinbase Text";
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(91, 97, 110);
+  -webkit-font-smoothing: antialiased;
+}
+.card-title {
+  font-family: "Coinbase Sans";
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.card-body {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(91, 97, 110);
+  cursor: pointer;
+}
+.card-main {
+  padding-right: 24px;
+  flex-grow: 1;
+}
+.stories-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 24px;
+}
+.heart-icon {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+.stories-bottom-left {
+  display: flex;
+  gap: 8px;
+  font-family: "Coinbase Text";
+  font-size: 13px;
+  font-weight: 500;
+}
+.stock-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  padding-left: 16px;
+  background-color: rgb(238, 240, 243);
+  cursor: pointer;
+  border-radius: 1000px;
+  border: none;
+  gap: 4px;
+}
+.stockbutton-left {
+  font-size: 13px;
+  font-family: "Coinbase Text";
+  font-weight: 500;
+}
+
+.stockbutton-right {
+  color: rgb(9, 133, 81);
+  font-size: 13px;
+  font-family: "Coinbase Text";
+  font-weight: 500;
 }

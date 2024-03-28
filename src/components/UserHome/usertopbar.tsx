@@ -1,6 +1,6 @@
 import "./usertopbar.css";
 
-export function UserTopBar() {
+export function UserTopBar({ name }) {
   return (
     <div className="top-bar-wrapper">
       <div className="top-bar-left">Home</div>
@@ -66,7 +66,7 @@ export function UserTopBar() {
           </svg>
         </div>
         <div className="profile-button">
-          <span>R</span>
+          <span>{name[0].toUpperCase()}</span>
         </div>
       </div>
     </div>
