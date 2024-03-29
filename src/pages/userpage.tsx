@@ -14,7 +14,11 @@ import { UserSidebar } from "../components/UserHome/usersidebar";
 import { UserTopBar } from "../components/UserHome/usertopbar";
 import "./userpage.css";
 import Axios from "axios";
-import { SignInContext } from "../contexts/signincontext";
+import {
+  SignInContext,
+  SignInContextType,
+  User,
+} from "../contexts/signincontext";
 
 type ScrollInfoList = {
   title: string;
@@ -47,12 +51,30 @@ const scrollInfo: ScrollInfoList[] = [
 export function UserPage() {
   const [scrollDisplay, setScrollDisplay] = useState(0);
   const [stories, setStories] = useState([]);
+  const { user, setUser }: SignInContextType = useContext(
+    SignInContext
+  ) as SignInContextType;
 
   useEffect(() => {
     Axios.get("http://localhost:3001/stories").then((response) => {
       setStories(response.data);
     });
+
+    Axios.get("http://localhost:3001/currentuser", {
+      params: { password: window.localStorage.getItem("token") },
+    }).then((res) => {
+      console.log(res.data);
+      setUser(res.data);
+    });
   }, []);
+
+  // useEffect(() => {
+  //   Axios.get("http://localhost:3001/currentuser", {
+  //     params: { password: window.localStorage.getItem("token") },
+  //   }).then((res) => {
+  //     console.log(res.data);
+  //   });
+  // }, []);
 
   function handleForwardScroll(count: number) {
     if (count === scrollInfo.length - 1) {
@@ -84,23 +106,12 @@ export function UserPage() {
     percent: number;
     id: number;
   };
-  type SignedinUser = {
-    user: {
-      id: number;
-      firstName: string;
-      lastName: string;
-      email: string;
-      password: string;
-    };
-  };
-
-  const { user }: SignedinUser = useContext(SignInContext) as SignedinUser;
 
   return (
     <div className="userpage-wrapper">
       <UserSidebar />
       <div className="middle-wrapper">
-        <UserTopBar name={user.firstName} />
+        {user ? <UserTopBar name={user.firstName} /> : null}
         <div className="main-wrapper">
           <div className="bottom-mid-wrapper">
             <BalanceDisplay />

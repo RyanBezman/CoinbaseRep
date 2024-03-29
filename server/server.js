@@ -98,6 +98,25 @@ app.get("/signin", async (req, res) => {
   });
 });
 
+app.post("/deleteactive", async (req, res) => {
+  const password = req.body.password;
+
+  await query("DELETE FROM activeusers WHERE password=?", [password]);
+
+  res.send("session deleted");
+});
+
+app.get("/currentuser", async (req, res) => {
+  const password = req.query.password;
+
+  const [user] = await query(
+    "SELECT * FROM activeusers JOIN users ON activeusers.userid = users.id WHERE activeusers.password = ?",
+    [password]
+  );
+
+  res.json(user);
+});
+
 app.listen(3001, () => {
   console.log("server is running");
 });
