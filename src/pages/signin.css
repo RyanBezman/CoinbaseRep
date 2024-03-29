@@ -65,6 +65,7 @@
   font-family: "Coinbase Sans";
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
 }
 .continuebuttonwrapper {
   display: flex;

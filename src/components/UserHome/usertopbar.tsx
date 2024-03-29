@@ -1,6 +1,9 @@
 import "./usertopbar.css";
 
-export function UserTopBar({ name }) {
+type UserTopBarProps = {
+  name: string;
+};
+export function UserTopBar({ name }: UserTopBarProps) {
   return (
     <div className="top-bar-wrapper">
       <div className="top-bar-left">Home</div>

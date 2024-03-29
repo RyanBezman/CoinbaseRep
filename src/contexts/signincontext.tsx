@@ -12,7 +12,7 @@ type User = {
   password: string;
 };
 
-type SignInContextType = {
+export type SignInContextType = {
   signInData: SignInForm;
   setSignInData: (p: SignInForm) => void;
   user: User | null;

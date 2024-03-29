@@ -84,8 +84,17 @@ export function UserPage() {
     percent: number;
     id: number;
   };
+  type SignedinUser = {
+    user: {
+      id: number;
+      firstName: string;
+      lastName: string;
+      email: string;
+      password: string;
+    };
+  };
 
-  const { user } = useContext(SignInContext);
+  const { user }: SignedinUser = useContext(SignInContext) as SignedinUser;
 
   return (
     <div className="userpage-wrapper">

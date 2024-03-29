@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
 import "./signin.css";
-import { ChangeEvent, useContext, useState } from "react";
-import { SignInContext } from "../contexts/signincontext";
+import { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { SignInContext, SignInContextType } from "../contexts/signincontext";
 import { SignInEmail } from "../components/SignInForm/signinemail";
 import { SignInPassword } from "../components/SignInForm/signingpasword";
 export function SignIn() {
-  const { signInData, setSignInData, user, setUser } =
-    useContext(SignInContext);
+  const { signInData, setSignInData, user, setUser }: SignInContextType =
+    useContext(SignInContext) as SignInContextType;
 
-  const [emailEntered, setEmailEntered] = useState(false);
+  const [emailEntered, setEmailEntered] = useState<boolean>(false);
 
   const handleSignIn = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -16,7 +15,7 @@ export function SignIn() {
     setSignInData({ ...signInData, [name]: value });
   };
 
-  const handleEmailContinue = (e) => {
+  const handleEmailContinue = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setEmailEntered(true);
   };

@@ -39,6 +39,7 @@
   gap: 4px;
   margin-right: 16px;
 }
+
 .asset-input {
   background-color: transparent;
   border: none;
@@ -72,6 +73,9 @@
   font-family: "Coinbase Sans";
   -webkit-font-smoothing: antialiased;
 }
+.buy-sell-button:hover {
+  background-color: rgb(1, 76, 236);
+}
 .transfer-button {
   height: 40px;
   background-color: rgb(211, 225, 255);
@@ -94,7 +98,9 @@
 
   -webkit-font-smoothing: antialiased;
 }
-
+.transfer-button:hover {
+  background-color: rgb(207, 221, 250);
+}
 .bell-buttons {
   border-radius: 1000px;
   display: flex;
@@ -105,10 +111,14 @@
   background-color: rgb(238, 240, 243);
   cursor: pointer;
 }
+.bell-buttons:hover {
+  background-color: rgb(233, 235, 238);
+}
 .bell-icon {
   height: 60%;
   width: 60%;
 }
+
 .more-icon {
   height: 50%;
   cursor: pointer;
@@ -126,4 +136,7 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+}
+.profile-button:hover {
+  background-color: rgb(52, 137, 186);
 }

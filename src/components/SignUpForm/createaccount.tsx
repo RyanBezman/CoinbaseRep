@@ -1,10 +1,10 @@
-import { ChangeEvent, useContext } from "react";
-import { SignupContext } from "../../contexts/signupcontext";
+import { ChangeEvent, FormEvent, useContext } from "react";
+import { SignUpContextType, SignupContext } from "../../contexts/signupcontext";
 import Axios from "axios";
 
 export function CreateAccount() {
-  const { signupData, setSignUpData, initialSignupData } =
-    useContext(SignupContext);
+  const { signupData, setSignUpData, initialSignupData }: SignUpContextType =
+    useContext(SignupContext) as SignUpContextType;
   console.log(signupData);
 
   const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
@@ -12,7 +12,7 @@ export function CreateAccount() {
     setSignUpData({ ...signupData, [name]: value });
   };
 
-  const addUser = (e: SubmitEvent) => {
+  const addUser = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     Axios.post("http://localhost:3001/signup", {
       firstName: signupData.first,

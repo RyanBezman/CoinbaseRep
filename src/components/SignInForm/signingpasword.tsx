@@ -21,7 +21,6 @@ type SignInPasswordProps = {
 export function SignInPassword({
   signInData,
   handleSignIn,
-  user,
   setUser,
 }: SignInPasswordProps) {
   const [error, setError] = useState(null);

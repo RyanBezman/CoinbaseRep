@@ -2,12 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Home } from "./pages/home";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PickYourAccount } from "./pages/pickyouraccount";
 import { SignIn } from "./pages/signin";
 import { SignUpPage } from "./pages/signuppage";

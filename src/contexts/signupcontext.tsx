@@ -7,7 +7,7 @@ type SignupForm = {
   password: string;
 };
 
-type SignUpContextType = {
+export type SignUpContextType = {
   signupData: SignupForm;
   setSignUpData: (p: SignupForm) => void;
   initialSignupData: SignupForm;

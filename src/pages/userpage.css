@@ -271,6 +271,8 @@
   padding: 16px;
   gap: 12px;
   padding-left: 32px;
+  min-width: 240px;
+  max-width: 100%;
 }
 .stock-logo {
   height: 32px;
@@ -308,6 +310,11 @@
   font-size: 16px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  min-width: 83px;
+  max-width: 100%;
+
+  justify-content: center;
 }
 .watchlist-percent {
   color: rgb(9, 133, 81);
@@ -483,4 +490,8 @@
   font-size: 13px;
   font-family: "Coinbase Text";
   font-weight: 500;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
