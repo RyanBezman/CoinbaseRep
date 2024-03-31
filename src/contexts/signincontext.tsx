@@ -16,7 +16,9 @@ export type SignInContextType = {
   signInData: SignInForm;
   setSignInData: (p: SignInForm) => void;
   user: User | null;
-  setUser: (p: User) => void;
+  setUser: (p: User | null) => void;
+  clickedNavButton: boolean;
+  setClickedNavButton: (p: boolean) => void;
 };
 export const SignInContext = createContext<SignInContextType | null>(null);
 const initialSignInData = {
@@ -31,10 +33,18 @@ export default function SignInContextProvider({
 }: SignInContextProviderProps) {
   const [signInData, setSignInData] = useState(initialSignInData);
   const [user, setUser] = useState<User | null>(null);
+  const [clickedNavButton, setClickedNavButton] = useState<boolean>(false);
 
   return (
     <SignInContext.Provider
-      value={{ signInData, setSignInData, user, setUser }}
+      value={{
+        signInData,
+        setSignInData,
+        user,
+        setUser,
+        clickedNavButton,
+        setClickedNavButton,
+      }}
     >
       {children}
     </SignInContext.Provider>

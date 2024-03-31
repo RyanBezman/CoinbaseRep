@@ -1,9 +1,17 @@
+import { useContext } from "react";
 import "./usertopbar.css";
+import { SignInContext, SignInContextType } from "../../contexts/signincontext";
 
 type UserTopBarProps = {
   name: string;
 };
 export function UserTopBar({ name }: UserTopBarProps) {
+  const { setClickedNavButton, clickedNavButton }: SignInContextType =
+    useContext(SignInContext) as SignInContextType;
+
+  const handleProfileClick = () => {
+    setClickedNavButton(!clickedNavButton);
+  };
   return (
     <div className="top-bar-wrapper">
       <div className="top-bar-left">Home</div>
@@ -68,7 +76,7 @@ export function UserTopBar({ name }: UserTopBarProps) {
             />
           </svg>
         </div>
-        <div className="profile-button">
+        <div className="profile-button" onClick={handleProfileClick}>
           <span>{name[0].toUpperCase()}</span>
         </div>
       </div>

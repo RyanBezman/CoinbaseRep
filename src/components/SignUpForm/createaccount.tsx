@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useContext } from "react";
 import { SignUpContextType, SignupContext } from "../../contexts/signupcontext";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export function CreateAccount() {
   const { signupData, setSignUpData, initialSignupData }: SignUpContextType =
@@ -12,6 +13,8 @@ export function CreateAccount() {
     setSignUpData({ ...signupData, [name]: value });
   };
 
+  const navigate = useNavigate();
+
   const addUser = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     Axios.post("http://localhost:3001/signup", {
@@ -19,10 +22,14 @@ export function CreateAccount() {
       lastName: signupData.last,
       email: signupData.email,
       password: signupData.password,
-    }).then(() => {
-      console.log("Signed up a new user");
-      setSignUpData(initialSignupData);
-    });
+    })
+      .then(() => {
+        console.log("Signed up a new user");
+        setSignUpData(initialSignupData);
+      })
+      .then(() => {
+        navigate("/signin");
+      });
   };
   return (
     <form onSubmit={addUser}>

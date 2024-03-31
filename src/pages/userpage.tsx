@@ -14,11 +14,8 @@ import { UserSidebar } from "../components/UserHome/usersidebar";
 import { UserTopBar } from "../components/UserHome/usertopbar";
 import "./userpage.css";
 import Axios from "axios";
-import {
-  SignInContext,
-  SignInContextType,
-  User,
-} from "../contexts/signincontext";
+import { SignInContext, SignInContextType } from "../contexts/signincontext";
+import { ProfileDropdown } from "../components/ProfileDropdown/profiledrop";
 
 type ScrollInfoList = {
   title: string;
@@ -51,7 +48,7 @@ const scrollInfo: ScrollInfoList[] = [
 export function UserPage() {
   const [scrollDisplay, setScrollDisplay] = useState(0);
   const [stories, setStories] = useState([]);
-  const { user, setUser }: SignInContextType = useContext(
+  const { user, setUser, clickedNavButton }: SignInContextType = useContext(
     SignInContext
   ) as SignInContextType;
 
@@ -67,14 +64,6 @@ export function UserPage() {
       setUser(res.data);
     });
   }, []);
-
-  // useEffect(() => {
-  //   Axios.get("http://localhost:3001/currentuser", {
-  //     params: { password: window.localStorage.getItem("token") },
-  //   }).then((res) => {
-  //     console.log(res.data);
-  //   });
-  // }, []);
 
   function handleForwardScroll(count: number) {
     if (count === scrollInfo.length - 1) {
@@ -146,6 +135,7 @@ export function UserPage() {
               scrollInfo={scrollInfo}
             />
             <BottomRightSideBar />
+            {clickedNavButton ? <ProfileDropdown /> : null}
           </div>
         </div>
       </div>

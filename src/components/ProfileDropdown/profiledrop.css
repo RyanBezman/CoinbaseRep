@@ -1,0 +1,93 @@
+.profile-drop-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgba(91, 97, 110, 0.2);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
+  position: fixed;
+}
+.drop-top {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.fullname-drop {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+.email-drop {
+  font-family: "Coinbase Text";
+  font-size: 13px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.advanced-wrapper {
+  display: flex;
+  padding: 24px;
+  border-top: 1px solid rgb(222, 223, 226);
+  border-bottom: 2px solid rgb(222, 223, 226);
+}
+.left-advanced {
+  padding: 16px;
+  background-color: rgb(211, 225, 255);
+  border-radius: 16px;
+  height: 157px;
+  width: 157px;
+}
+.leftadvanced-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.leftadvanced-title {
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 8px;
+}
+.leftadvanced-body {
+  font-family: "Coinbase Text";
+  font-size: 12px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(91, 97, 110);
+}
+.right-advanced {
+  padding: 16px;
+  background-color: transparent;
+  border-radius: 16px;
+  height: 157px;
+  width: 157px;
+}
+.new {
+  color: rgb(0, 82, 255);
+  background-color: rgb(211, 225, 255);
+  border-radius: 8px;
+  font-family: "Coinbase Sans";
+  font-size: 11px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.profile-options {
+  display: flex;
+  font-family: "Coinbase Sans";
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  gap: 12px;
+  cursor: pointer;
+}
+.red {
+  color: rgb(207, 32, 47);
+}
