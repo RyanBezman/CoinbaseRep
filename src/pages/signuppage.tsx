@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SignUpNav } from "../components/Navbar/signupnav";
 import { CreateAccount } from "../components/SignUpForm/createaccount";
 import "./singuppage.css";
 export function SignUpPage() {
+  const location = useLocation();
   return (
     <div className="signup-page-wrapper">
       <SignUpNav />
@@ -33,7 +34,7 @@ export function SignUpPage() {
               <div className="createaccount-footer">
                 Required fields have an asterisk: *
               </div>
-              <CreateAccount />
+              <CreateAccount email={location.state.email} />
               <div className="signupfor-business">
                 <span className="blue"> Sign up</span> for a business account
               </div>

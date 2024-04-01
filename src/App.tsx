@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PickYourAccount } from "./pages/pickyouraccount";
 import { SignIn } from "./pages/signin";
 import { SignUpPage } from "./pages/signuppage";
-import SignupContextProvider from "./contexts/signupcontext";
 import SignInContextProvider from "./contexts/signincontext";
 import { UserPage } from "./pages/userpage";
 
@@ -20,19 +19,17 @@ function App() {
   return (
     <>
       <Context.Provider value={[navbarHover, setNavbarHover]}>
-        <SignupContextProvider>
-          <SignInContextProvider>
-            <Router>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/pickyouraccount" element={<PickYourAccount />} />
-                <Route path="/signin" element={<SignIn />} />
-                <Route path="/signup" element={<SignUpPage />} />
-                <Route path="/user" element={<UserPage />} />
-              </Routes>
-            </Router>
-          </SignInContextProvider>
-        </SignupContextProvider>
+        <SignInContextProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pickyouraccount" element={<PickYourAccount />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUpPage />} />
+              <Route path="/user" element={<UserPage />} />
+            </Routes>
+          </Router>
+        </SignInContextProvider>
       </Context.Provider>
     </>
   );

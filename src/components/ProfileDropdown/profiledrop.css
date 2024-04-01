@@ -5,7 +5,10 @@
   border: 1px solid rgba(91, 97, 110, 0.2);
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
-  position: fixed;
+  color: black;
+  position: absolute;
+  top: 50px;
+  right: 0;
 }
 .drop-top {
   padding: 24px;

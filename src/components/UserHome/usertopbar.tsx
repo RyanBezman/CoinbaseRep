@@ -1,13 +1,12 @@
-import { useContext } from "react";
+import { useState } from "react";
 import "./usertopbar.css";
-import { SignInContext, SignInContextType } from "../../contexts/signincontext";
+import { ProfileDropdown } from "../ProfileDropdown/profiledrop";
 
 type UserTopBarProps = {
   name: string;
 };
 export function UserTopBar({ name }: UserTopBarProps) {
-  const { setClickedNavButton, clickedNavButton }: SignInContextType =
-    useContext(SignInContext) as SignInContextType;
+  const [clickedNavButton, setClickedNavButton] = useState<boolean>(false);
 
   const handleProfileClick = () => {
     setClickedNavButton(!clickedNavButton);
@@ -78,6 +77,7 @@ export function UserTopBar({ name }: UserTopBarProps) {
         </div>
         <div className="profile-button" onClick={handleProfileClick}>
           <span>{name[0].toUpperCase()}</span>
+          {clickedNavButton ? <ProfileDropdown /> : null}
         </div>
       </div>
     </div>

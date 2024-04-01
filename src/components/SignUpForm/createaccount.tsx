@@ -1,12 +1,24 @@
-import { ChangeEvent, FormEvent, useContext } from "react";
-import { SignUpContextType, SignupContext } from "../../contexts/signupcontext";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
+type SignupForm = {
+  first: string;
+  last: string;
+  email: string;
+  password: string;
+};
+const initialSignupData: SignupForm = {
+  first: "",
+  last: "",
+  email: "",
+  password: "",
+};
 
-export function CreateAccount() {
-  const { signupData, setSignUpData, initialSignupData }: SignUpContextType =
-    useContext(SignupContext) as SignUpContextType;
-  console.log(signupData);
+export function CreateAccount({ email }: { email: string }) {
+  const [signupData, setSignUpData] = useState({
+    ...initialSignupData,
+    email: email,
+  });
 
   const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -17,6 +29,7 @@ export function CreateAccount() {
 
   const addUser = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     Axios.post("http://localhost:3001/signup", {
       firstName: signupData.first,
       lastName: signupData.last,
@@ -68,7 +81,7 @@ export function CreateAccount() {
             placeholder="Email"
             className="legalemail-input"
             name="email"
-            value={signupData.email}
+            value={email}
             onChange={handleSignUpForm}
             required
           />

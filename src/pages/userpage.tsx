@@ -15,7 +15,6 @@ import { UserTopBar } from "../components/UserHome/usertopbar";
 import "./userpage.css";
 import Axios from "axios";
 import { SignInContext, SignInContextType } from "../contexts/signincontext";
-import { ProfileDropdown } from "../components/ProfileDropdown/profiledrop";
 
 type ScrollInfoList = {
   title: string;
@@ -48,7 +47,7 @@ const scrollInfo: ScrollInfoList[] = [
 export function UserPage() {
   const [scrollDisplay, setScrollDisplay] = useState(0);
   const [stories, setStories] = useState([]);
-  const { user, setUser, clickedNavButton }: SignInContextType = useContext(
+  const { user, setUser }: SignInContextType = useContext(
     SignInContext
   ) as SignInContextType;
 
@@ -63,7 +62,7 @@ export function UserPage() {
       console.log(res.data);
       setUser(res.data);
     });
-  }, []);
+  }, [setUser]);
 
   function handleForwardScroll(count: number) {
     if (count === scrollInfo.length - 1) {
@@ -135,7 +134,6 @@ export function UserPage() {
               scrollInfo={scrollInfo}
             />
             <BottomRightSideBar />
-            {clickedNavButton ? <ProfileDropdown /> : null}
           </div>
         </div>
       </div>

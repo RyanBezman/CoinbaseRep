@@ -136,6 +136,7 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+  position: relative;
 }
 .profile-button:hover {
   background-color: rgb(52, 137, 186);
