@@ -10,6 +10,17 @@ export function MainPage() {
   const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
+
+  const handleSignupEmail = () => {
+    navigate(
+      { pathname: "/signup" },
+      {
+        state: {
+          email: email,
+        },
+      }
+    );
+  };
   return (
     <div className="main-wrapper">
       <div className="main-centered">
@@ -29,7 +40,7 @@ export function MainPage() {
           </div>
 
           <p className="p-email">Email address</p>
-          <div className="main-input-form">
+          <form className="main-input-form" onSubmit={handleSignupEmail}>
             <input
               type="email"
               name="email"
@@ -39,22 +50,10 @@ export function MainPage() {
               onChange={handleSignUpForm}
             />
 
-            <button
-              className="main-signup-button"
-              onClick={() => {
-                navigate(
-                  { pathname: "/signup" },
-                  {
-                    state: {
-                      email: email,
-                    },
-                  }
-                );
-              }}
-            >
+            <button className="main-signup-button" type="submit">
               Sign up
             </button>
-          </div>
+          </form>
           <p className="signup-reward">Sign up and get up to $200 in crypto¹</p>
         </div>
       </div>

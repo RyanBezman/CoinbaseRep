@@ -46,6 +46,7 @@
   font-family: "Coinbase Sans";
   font-size: 16px;
   font-weight: 400;
+  outline: none;
 }
 .magnifying-input-logo {
   height: 20px;

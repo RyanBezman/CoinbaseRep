@@ -34,7 +34,13 @@ export function SignUpPage() {
               <div className="createaccount-footer">
                 Required fields have an asterisk: *
               </div>
-              <CreateAccount email={location.state.email} />
+              <CreateAccount
+                email={
+                  location.state && location.state.email
+                    ? location.state.email
+                    : ""
+                }
+              />
               <div className="signupfor-business">
                 <span className="blue"> Sign up</span> for a business account
               </div>

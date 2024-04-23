@@ -208,7 +208,9 @@ export function ProfileDropdown() {
         </div>
       </div>
       {profileList.map((obj) => {
-        return <ProfileOptions svg={obj.svg} title={obj.title} />;
+        return (
+          <ProfileOptions svg={obj.svg} title={obj.title} key={obj.title} />
+        );
       })}
       <div className="profile-options">
         <div className="options-logo">

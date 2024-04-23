@@ -5,7 +5,7 @@ export function BalanceDisplay() {
     <div className="mybalance-wrapper">
       <div className="my-balance">My balance</div>
       <div className="balance-wrapper">
-        <div className="balance">$0.00</div>
+        <div className="balance">$ 723,125.62</div>
         <span className="greater-than"> &gt;</span>
       </div>
     </div>

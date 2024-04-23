@@ -1,6 +1,7 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { SignInContext, SignInContextType } from "../../contexts/signincontext";
 type SignupForm = {
   first: string;
   last: string;
@@ -20,12 +21,38 @@ export function CreateAccount({ email }: { email: string }) {
     email: email,
   });
 
+  const { setUser }: SignInContextType = useContext(
+    SignInContext
+  ) as SignInContextType;
+
   const handleSignUpForm = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setSignUpData({ ...signupData, [name]: value });
   };
 
   const navigate = useNavigate();
+
+  const handleAccountCreated = () => {
+    Axios.get("http://localhost:3001/signin", {
+      params: {
+        email: signupData.email,
+        password: signupData.password,
+      },
+    })
+      .then((res) => {
+        console.log(res.data);
+        window.localStorage.setItem("token", res.data.token);
+        window.localStorage.setItem("name", res.data.user.firstName);
+        setUser(res.data.user);
+        navigate("/user");
+      })
+      .catch((error) => {
+        // console.log(error.response.data.error);
+        if (error) {
+          console.log(error);
+        }
+      });
+  };
 
   const addUser = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,7 +68,7 @@ export function CreateAccount({ email }: { email: string }) {
         setSignUpData(initialSignupData);
       })
       .then(() => {
-        navigate("/signin");
+        handleAccountCreated();
       });
   };
   return (
@@ -81,7 +108,7 @@ export function CreateAccount({ email }: { email: string }) {
             placeholder="Email"
             className="legalemail-input"
             name="email"
-            value={email}
+            value={signupData.email || email}
             onChange={handleSignUpForm}
             required
           />

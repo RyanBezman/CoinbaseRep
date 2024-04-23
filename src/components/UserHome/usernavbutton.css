@@ -17,6 +17,11 @@
   fill: blue;
 }
 
+.user-navbutton-wrapper:hover svg#planet circle,
+.user-navbutton-wrapper:hover svg#planet path {
+  stroke: blue;
+}
+
 .house-logo {
   height: 24px;
   width: 24px;
