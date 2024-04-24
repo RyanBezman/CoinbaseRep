@@ -38,9 +38,10 @@ export function MainPage() {
               sell, and manage crypto
             </div>
           </div>
-
           <p className="p-email">Email address</p>
           <form className="main-input-form" onSubmit={handleSignupEmail}>
+            <p className="p-email-small">Email address</p>
+
             <input
               type="email"
               name="email"

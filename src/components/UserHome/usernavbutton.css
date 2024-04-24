@@ -14,14 +14,20 @@
 .user-navbutton-wrapper:hover {
   background-color: rgb(240, 243, 250);
   color: rgb(0, 82, 255);
-  fill: blue;
+  fill: rgb(0, 82, 255);
 }
 
 .user-navbutton-wrapper:hover svg#planet circle,
 .user-navbutton-wrapper:hover svg#planet path {
   stroke: blue;
 }
+.blue {
+  color: rgb(0, 82, 255);
 
+  background-color: rgb(240, 243, 250);
+
+  fill: rgb(0, 82, 255);
+}
 .house-logo {
   height: 24px;
   width: 24px;
@@ -39,4 +45,9 @@
   font-weight: 500;
   line-height: 24px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1280px) {
+  .usernavbutton-text {
+    display: none;
+  }
 }

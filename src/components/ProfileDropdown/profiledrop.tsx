@@ -132,6 +132,7 @@ export function ProfileDropdown() {
   const { user, setUser }: SignInContextType = useContext(
     SignInContext
   ) as SignInContextType;
+
   const navigate = useNavigate();
   const handleSignOut = () => {
     Axios.post("http://localhost:3001/deleteactive", {
@@ -142,6 +143,7 @@ export function ProfileDropdown() {
       window.localStorage.removeItem("token");
     });
   };
+
   return (
     <div className="profile-drop-wrapper">
       <div className="drop-top">

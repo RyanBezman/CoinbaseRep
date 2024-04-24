@@ -85,6 +85,22 @@
   padding-top: 4px;
   padding-bottom: 8px;
 }
+.login-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.eye-icon {
+  position: relative;
+  right: 30px;
+}
+.toggle-hidden-button {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background: none;
+  cursor: pointer;
+}
 .legalemail-input {
   padding: 16px;
   border-radius: 8px;

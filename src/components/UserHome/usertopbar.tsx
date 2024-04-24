@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./usertopbar.css";
 import { ProfileDropdown } from "../ProfileDropdown/profiledrop";
 
@@ -6,11 +6,24 @@ type UserTopBarProps = {
   name: string;
 };
 export function UserTopBar({ name }: UserTopBarProps) {
-  const [clickedNavButton, setClickedNavButton] = useState<boolean>(false);
+  const [profileOptions, setProfileOptions] = useState<boolean>(false);
 
   const handleProfileClick = () => {
-    setClickedNavButton(!clickedNavButton);
+    setProfileOptions(!profileOptions);
   };
+
+  useEffect(() => {
+    const handleOutsideClick = () => {
+      setProfileOptions(false);
+    };
+    if (profileOptions) {
+      document.addEventListener("click", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [profileOptions]);
+
   return (
     <div className="top-bar-wrapper">
       <div className="top-bar-left">Home</div>
@@ -75,9 +88,23 @@ export function UserTopBar({ name }: UserTopBarProps) {
             />
           </svg>
         </div>
-        <div className="profile-button" onClick={handleProfileClick}>
+        <div
+          className="profile-button"
+          onClick={(e: React.MouseEvent) => {
+            e.stopPropagation();
+            handleProfileClick();
+          }}
+        >
           <span>{name[0].toUpperCase()}</span>
-          {clickedNavButton ? <ProfileDropdown /> : null}
+          {profileOptions ? (
+            <div
+              onClick={(e: React.MouseEvent) => {
+                e.stopPropagation();
+              }}
+            >
+              <ProfileDropdown />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
