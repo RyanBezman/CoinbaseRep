@@ -50,6 +50,11 @@
     width: auto;
   }
 }
+@media screen and (max-width: 770px) {
+  .top-input-wrapper {
+    display: none;
+  }
+}
 @media screen and (max-width: 980px) {
   .asset-input {
     display: none;
@@ -116,6 +121,13 @@
   cursor: pointer;
 
   -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (max-width: 770px) {
+  .buy-sell-button,
+  .transfer-button {
+    display: none;
+  }
 }
 .transfer-button:hover {
   background-color: rgb(207, 221, 250);

@@ -13,7 +13,11 @@
     margin-left: 87px;
   }
 }
-
+@media screen and (max-width: 770px) {
+  .middle-wrapper {
+    margin-left: 0;
+  }
+}
 .bottom-mid-wrapper {
   flex: 1;
   display: flex;
@@ -343,6 +347,7 @@
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
+
 .option-to-buy {
   font-family: "Coinbase Sans";
   font-size: 16px;
@@ -362,6 +367,13 @@
   gap: 16px;
   padding-left: 16px;
   padding-right: 16px;
+}
+@media screen and (max-width: 660px) {
+  .watchlist-marketcap,
+  .option-to-buy,
+  .star-icon {
+    display: none;
+  }
 }
 .menurows {
   height: 16px;
